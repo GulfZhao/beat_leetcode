@@ -1,27 +1,35 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/longest-palindromic-substring/
-解题思路: 动态规划
+解题思路: 中心扩散法，判断回文核心是找到回文中心，围绕回文中心向两边扩散，扩散的过程判断两边字符是否相等。在遍历过程中，需要考虑到回文字符串的长度
+         奇数和偶数两种情况，
 """
 
 
 class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        length = len(s)
-        dp = [[1] * length for _ in range(length)]
-        left, right = 0, 0 #长度为1时
-        for i in range(1, length):
-             for j in range(length-i):
-                if s[j] == s[j+i] and dp[j+1][j+i-1]:
-                    dp[j][j+i] = 1
-                    left, right = j, j+i
-                else:
-                    dp[j][j+i] = 0
-        return s[left: right+1]
+    def palindrome(self, s, left, right):
+        #寻找回文串
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        # 返回回文串,list的分片属于前闭后开
+        return s[left+1:right]
 
+    def longestPalindrome(self, s: str) -> str:
+        res = ''
+        if len(s) < 2:
+            return s
+        for i in range(len(s)):
+            # 奇数情况下的回文子串
+            res_1 = self.palindrome(s, i, i)
+            # 偶数情况下的回文子串
+            res_2 = self.palindrome(s, i, i+1)
+            res = res_1 if len(res_1) > len(res) else res
+            res = res_2 if len(res_2) > len(res) else res
+        return res
 
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    res = s.longestPalindrome('baba')
+    res = s.longestPalindrome('cbbd')
     print(res)

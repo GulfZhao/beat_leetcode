@@ -3,6 +3,8 @@
 题目链接: https://leetcode.cn/problems/reverse-linked-list/
 解题思路: 3个指针，pre，cur,next,循环移动cur，直到cur为none.
 """
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -22,13 +24,13 @@ class Solution:
 
     def reverseList(self, head: [ListNode]) -> [ListNode]:
         if not head: return None
-        pre = next = None
+        pre = None
         cur = head
-        while cur != None:
-            next = cur.next
+        while cur is not None:
+            nex = cur.next
             cur.next = pre
             pre = cur
-            cur = next
+            cur = nex
         return pre
 
 

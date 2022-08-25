@@ -7,7 +7,6 @@
 from typing import List
 
 
-# 主代码
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         ha = dict()
@@ -17,7 +16,6 @@ class Solution:
             ha[nums[i]] = i
 
 
-# 测试用例
 if __name__ == "__main__":
     s = Solution()
     res = s.twoSum([2, 7, 11, 15], 18)

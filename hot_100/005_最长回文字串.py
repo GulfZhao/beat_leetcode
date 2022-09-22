@@ -28,8 +28,10 @@ class Solution:
             res = res_2 if len(res_2) > len(res) else res
         return res
 
+
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    res = s.longestPalindrome('cbbd')
+    test_data = "cbbd"
+    res = s.longestPalindrome(test_data)
     print(res)

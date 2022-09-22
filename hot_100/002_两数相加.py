@@ -16,7 +16,7 @@ class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         res = p = ListNode()  # 初始化一个虚拟头节点，res 作为返回，p 用遍历
         s = 0  # s用作记录进位
-        while l1 or l2 or s:
+        while l1 or l2 or s:   # 循环终止条件：链表指针到尾部和没有进位情况
             s += (l1.val if l1 else 0) + (l2.val if l2 else 0)
             p.next = ListNode(s % 10)
             p = p.next
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     l2 = ListNode(5)
     l2.next = ListNode(6)
     l2.next.next = ListNode(4)
-    res = s.addTwoNumbers(l1,l2)
+    res = s.addTwoNumbers(l1, l2)
     out = list()
     while res:
         out.append(res.val)

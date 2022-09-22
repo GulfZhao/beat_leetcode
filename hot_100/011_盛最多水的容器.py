@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/container-with-most-water/
-解题思路: 利用双指针分别指向数组边界，计算容积面积
+解题思路: 利用双指针分别指向数组边界，计算容器面积area=min(左高度，右高度)*（右-左），移动指针规则：高度低的一端移动指针。
 """
 from typing import List
 
@@ -13,7 +13,7 @@ class Solution:
         while l < r:
             area = min(height[l], height[r]) * (r - l)
             ans = max(area, ans)
-            if height[l] < height[r]:
+            if height[l] < height[r]:      # 移动左右边界，高度低的一侧移动指针
                 l = l + 1
             else:
                 r = r - 1

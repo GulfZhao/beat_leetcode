@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/
+题目难度: easy
 解题思路:一次遍历，记录最小值，并计算price[i]与最小值的差值得出收益，取最大收益即最大利润
 """
 from typing import List

@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/
+题目难度：medium
 解题思路: 有序数组寻找目标值->二分查找
 """
 from typing import List

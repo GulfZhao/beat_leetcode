@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/3sum/
+题目难度：medium
 解题思路: 排序+双指针移动。排序：判断最小值
 """
 from typing import List

@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/container-with-most-water/
+题目难度：medium
 解题思路: 利用双指针分别指向数组边界，计算容器面积area=min(左高度，右高度)*（右-左），移动指针规则：高度低的一端移动指针。
 """
 from typing import List

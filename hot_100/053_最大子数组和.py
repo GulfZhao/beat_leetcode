@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接:https://leetcode.cn/problems/maximum-subarray/
+题目难度：medium
 解题思路: 动态规划问题：只需要找到最优解，不需要给出具体的方案。给出动态规划方程dp[i]:表示以nums[i]结尾的连续子数组的最大和，
 """
 from typing import List

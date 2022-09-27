@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/top-k-frequent-elements/
+题目难度：medium
 解题思路：哈希+最小堆，利用哈希来记录元素与出现次数堆映射关系，前k大或第k大：最小堆（堆顶元素最小），相反用最大堆（堆顶元素最大）。
 """
 import collections

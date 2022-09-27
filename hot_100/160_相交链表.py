@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接:https://leetcode.cn/problems/intersection-of-two-linked-lists/
+题目难度：easy
 解题思路: 给定的 2 个链表的长度如果一样长，都从头往后扫即可。如果不一样长，需要先“拼成”一样长。把 B 拼接到 A 后面，把 A 拼接到 B 后面。
         这样 2 个链表的长度都是 A + B。再依次扫描比较 2 个链表的结点是否相同。
 """

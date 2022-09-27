@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/remove-nth-node-from-end-of-list/
+题目难度：medium
 解题思路:利用快慢指针，快慢指针相差n，当快指针指到链表末尾时，慢指针的next刚好是待删除的指针。
 """
 # Definition for singly-linked list.

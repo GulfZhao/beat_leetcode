@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/number-of-islands/
+题目难度：medium
 解题思路: 岛屿问题->网格类，典型解法DFS，参考二叉树dfs,确定循环跳出条件（root==null）以及相邻节点(左子树和右子树)。网格点坐标（r,c),相邻节点为
         上下左右，跳出条件为到达网格边界以及到达grid[i][j]=0，为了避免重复遍历，对遍历过的节点做标记
 """

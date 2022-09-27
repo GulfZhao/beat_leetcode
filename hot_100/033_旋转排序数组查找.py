@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/search-in-rotated-sorted-array/
+题目难度：medium
 解题思路:有序数组经过旋转后将数组一分为二，其中一定有一个是有序的，另一个可能是有序，也能是部分有序。有序数组搜索-->二分查找
 """
 from typing import List

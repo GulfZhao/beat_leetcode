@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/generate-parentheses/?favorite=2cktkvj
+题目难度：medium
 解题思路: 回溯问题，通过构造一颗隐式的树来求解，一般用深度优先算法。基本过程：
 https://leetcode.cn/problems/generate-parentheses/solution/hui-su-suan-fa-by-liweiwei1419/
 """

@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/two-sum/
+题目难度：easy
 解题思路: num1+num2=target,核心是要判断num2=target-num1是否在list中，通过字典来模拟哈希查找（时间复杂度为O(1)）
 字典描述：{元素值：元素下标}，如{2：1}
 """

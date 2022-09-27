@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/binary-tree-level-order-traversal/
+题目难度：medium
 解题思路: 层次遍历，逐层遍历，每层节点保存为子数组。利用队列。参考：https://juejin.cn/post/6844903807759941646
 """
 from typing import List

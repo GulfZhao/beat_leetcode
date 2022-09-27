@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/restore-ip-addresses/
+题目难度：medium
 解题思路: 得到所有组合->回溯，dfs
 """
 from typing import List

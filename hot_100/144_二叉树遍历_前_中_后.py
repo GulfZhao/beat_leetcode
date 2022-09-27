@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/binary-tree-preorder-traversal/
+题目难度：medium
 解题思路: 前序遍历：根节点-左-右,中序遍历：左-根节点-右，后序遍历：左-右-根节点
 解法1：递归，前序、中序、后序的递归解法几乎一致，区别仅在于append value的的顺序
 解法2：非递归算法，也是重点考察的点。前序遍历：

@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/merge-two-sorted-lists/
+题目难度：easy
 解题思路: 将两个升序链表合并为一个新的升序链表，迭代
 """
 # Definition for singly-linked list.
@@ -26,7 +27,7 @@ class Solution:
         if not list2: return list1
         dummy_head = ListNode()
         p1, p2 = list1, list2
-        pre = dummy_head
+        pre = dummy_head        # 不能忽略
         while p1 and p2:
             if p1.val > p2.val:
                 pre.next = p2

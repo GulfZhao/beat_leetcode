@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/permutations/
+题目难度：medium
 解题思路: 回溯算法：自后向前追溯曾经访问过的路径，就叫做回溯。构造回溯决策树，通过dfs遍历所有可能的组合。
 """
 from typing import List

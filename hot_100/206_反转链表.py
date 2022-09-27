@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/reverse-linked-list/
+题目难度：easy
 解题思路: 3个指针，pre，cur,next,循环移动cur，直到cur为none.
 """
 

@@ -1,11 +1,13 @@
 # -*- coding: UTF-8 -*-
 """
 题目链接: https://leetcode.cn/problems/reverse-nodes-in-k-group/
-解题思路: 难道hard，链表节点按照 k 个一组分组，所以可以使用一个指针 head 依次指向每组的头节点。这个指针每次向前移动 k 步，直至链表结尾。
+题目难度：hard
+解题思路: 链表节点按照 k 个一组分组，所以可以使用一个指针 head 依次指向每组的头节点。这个指针每次向前移动 k 步，直至链表结尾。
          对于每个分组，我们先判断它的长度是否大于等于 k。若是，我们就翻转这部分链表，否则不需要翻转。
-
 """
 # Definition for singly-linked list.
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

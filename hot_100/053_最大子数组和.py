@@ -2,7 +2,7 @@
 """
 题目链接:https://leetcode.cn/problems/maximum-subarray/
 题目难度：medium
-解题思路: 动态规划问题：只需要找到最优解，不需要给出具体的方案。给出动态规划方程dp[i]:表示以nums[i]结尾的连续子数组的最大和，
+解题思路: 动态规划问题：只需要找到最优解，不需要给出具体的方案。给出动态规划方程dp[i]:表示以nums[i]结尾的连续子数组的最大和
 """
 from typing import List
 
@@ -10,7 +10,7 @@ from typing import List
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:  # 解法1：dp
         if len(nums) == 0: return 0
-        if len(nums) == 1: return nums[0]
+
         size = len(nums)
         dp = [0] * size
         dp[0] = nums[0]

@@ -84,6 +84,7 @@ class Solution:
         return res
 
     def postorderTraversal_2(self, root: TreeNode) -> List[int]:  # 后序遍历非递归解法(借助2个栈)
+        if not root: return []
         stack = [root]       # 进栈顺序：左，右，根，出栈顺序，根，右，左
         stack_2 = []         # 接收stack弹出结果
         res = []

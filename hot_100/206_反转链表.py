@@ -27,7 +27,7 @@ class Solution:
         if not head: return None
         pre = None
         cur = head
-        while cur is not None:
+        while cur:
             nex = cur.next
             cur.next = pre
             pre = cur

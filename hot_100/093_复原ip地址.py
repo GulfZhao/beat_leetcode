@@ -9,11 +9,10 @@ from typing import List
 
 class Solution:
     def dfs(self, s, depth, path, res):
-        if depth > 4: return
         if depth == 4 and not s:   # 递归终止条件
-            res.append(path[:-1])
+            res.append(path[:-1])   # 去掉末尾的'.'
         for i in range(len(s)):
-            if s[:i + 1] == '0' or (s[0] != '0' and 0 < int(s[:i + 1]) <= 255):  # 约束条件
+            if s[:i + 1] == '0' or (s[0] != '0' and 0 < int(s[:i + 1]) <= 255):  # 约束条件:前导不为0或者'0'单独为一段。
                 self.dfs(s[i + 1:], depth + 1, path + s[:i + 1] + '.', res)
 
     def restoreIpAddress(self, s: str) -> List[str]:

@@ -35,6 +35,6 @@ class Solution:
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    test= [1, 2, 3, 4]
+    test = [1, 2, 3, 4]
     res = s.permute(test)
     print(res)

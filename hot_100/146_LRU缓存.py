@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 """
-题目链接: https://leetcode. cn/problems/lru-cache/
+题目链接: https://leetcode.cn/problems/lru-cache/
 题目难度：medium
 解题思路: 实现LRU(最近最少使用)缓存机制，需要实现方法get，put，且时间时间复杂度为O（1），get通过map可以满足。LRU插入和更新的时候发生在链首，
          而删除则发生在链尾，通过双向链表可以实现实现0（1）时间复杂度。故LRU缓存通过哈希表和双向链表来实现

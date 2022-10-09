@@ -4,6 +4,8 @@
 题目难度：medium
 解题思路:利用快慢指针，快慢指针相差n，当快指针指到链表末尾时，慢指针的next刚好是待删除的指针。
 """
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):

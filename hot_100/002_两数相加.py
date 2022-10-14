@@ -14,6 +14,20 @@ class ListNode:
 
 
 class Solution:
+
+    def generate_listNode(self, queue):
+        n = len(queue)
+        if n == 0: return None
+        node_list = []
+        for value in queue:
+            node_list.append(ListNode(value))
+        i = 0
+        while i+1 < n:
+            node_list[i].next = node_list[i+1]
+            i += 1
+        node_list[n-1].next = None
+        return node_list[0]
+
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
         res = p = ListNode()  # 初始化一个虚拟头节点，res 作为返回，p 用遍历
         s = 0  # s用作记录进位
@@ -30,12 +44,10 @@ class Solution:
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    l1 = ListNode(2)
-    l1.next = ListNode(4)
-    l1.next.next = ListNode(3)
-    l2 = ListNode(5)
-    l2.next = ListNode(6)
-    l2.next.next = ListNode(4)
+    l1 = [2, 4, 3]
+    l2 = [5, 6, 4]
+    l1 = s.generate_listNode(l1)
+    l2 = s.generate_listNode(l2)
     res = s.addTwoNumbers(l1, l2)
     out = list()
     while res:

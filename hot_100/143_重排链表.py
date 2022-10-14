@@ -10,6 +10,7 @@
 
 """
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -78,11 +79,10 @@ class Solution:
         return head
 
 
-
 if __name__ == "__main__":
     s = Solution()
     head = s.test_case()
-    res_head = s.reorderList2(head)
+    res_head = s.reorderList1(head)
     out = list()
     while res_head:
         out.append(res_head.val)

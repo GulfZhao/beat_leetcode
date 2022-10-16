@@ -30,7 +30,7 @@ class Solution:
                 node = None
             treeNode_list.append(node)  # 生成treeNode
         i = 0
-        while 2 * i + 2 <= n:
+        while 2 * i + 2 < n:
             if treeNode_list[i]:
                 treeNode_list[i].left = treeNode_list[2 * i + 1]
                 treeNode_list[i].right = treeNode_list[2 * i + 2]

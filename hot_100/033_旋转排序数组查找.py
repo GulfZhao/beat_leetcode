@@ -13,7 +13,7 @@ class Solution:
             mid = (right + left) >> 1
             if nums[mid] == target:
                 return mid
-            if nums[mid] > nums[left]:     # 落在数值较大的区间
+            elif nums[mid] > nums[left]:     # 落在数值较大的区间
                 if nums[left] <= target < nums[mid]:
                     right = mid - 1
                 else:

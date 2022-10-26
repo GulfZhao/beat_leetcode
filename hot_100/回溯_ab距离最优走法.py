@@ -8,9 +8,8 @@
 class Solution:
 
     def fromA2B(self, n: int) -> int:
-        path = list()
+        path = [0]
         depth = 0
-        path.append(0)
         while path:
             depth += 1
             size = len(path)
@@ -28,6 +27,6 @@ class Solution:
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    test = 10
+    test = 11
     res = s.fromA2B(test)
     print("result: %d " % res)

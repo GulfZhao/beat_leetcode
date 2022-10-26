@@ -16,7 +16,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         i = len(nums) - 2
-        while i >= 0 and nums[i] >= nums[i + 1]:
+        while i >= 0 and nums[i] >= nums[i + 1]:  # 查找第一个相邻升序的元素对
             i -= 1
         if i >= 0:
             j = len(nums) - 1
@@ -32,6 +32,6 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    test = [3, 2, 1]
+    test = [3, 2, 1, 4]
     s.nextPermutation(test)
     print(test)

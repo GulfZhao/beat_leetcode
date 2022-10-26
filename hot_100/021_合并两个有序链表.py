@@ -4,6 +4,8 @@
 题目难度：easy
 解题思路: 将两个升序链表合并为一个新的升序链表，迭代
 """
+
+
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -13,14 +15,18 @@ class ListNode:
 
 class Solution:
 
-    def test_case(self):
-        node6 = ListNode(6, None)
-        node5 = ListNode(5, None)
-        node4 = ListNode(4, node6)
-        node3 = ListNode(3, node5)
-        node2 = ListNode(2, node4)
-        node1 = ListNode(1, node3)
-        return node1, node2
+    def generate_listNode(self, queue):
+        n = len(queue)
+        if n == 0: return None
+        node_list = []
+        for value in queue:
+            node_list.append(ListNode(value))
+        i = 0
+        while i + 1 < n:
+            node_list[i].next = node_list[i + 1]
+            i += 1
+        node_list[n - 1].next = None
+        return node_list[0]
 
     def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
         if not list1: return list2
@@ -44,7 +50,10 @@ class Solution:
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    l1, l2 = s.test_case()
+    queue1 = [1, 2, 4]
+    queue2 = [1, 3, 4]
+    l1 = s.generate_listNode(queue1)
+    l2 = s.generate_listNode(queue2)
     res_head = s.mergeTwoLists(l1, l2)
     out = list()
     while res_head:

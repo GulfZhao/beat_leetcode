@@ -17,14 +17,15 @@ class Solution:
         def dfs(cur_str, left, right, n):
             """
             :param cur_str: 从根结点到叶子结点的路径字符串
-            :param left: 左括号还可以使用的个数
-            :param right: 右括号还可以使用的个数
+            :param left:  左括号已使用个数
+            :param right: 右括号已使用个数
+            :param n: 括号数
             :return:
             """
             if left == n and right == n:
                 res.append(cur_str)
                 return
-            if right < left:
+            if left < right:
                 return
             if left < n:
                 dfs(cur_str + '(', left + 1, right, n)
@@ -37,5 +38,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    res = s.generateParenthesis(0)
+    res = s.generateParenthesis(3)
     print(res)

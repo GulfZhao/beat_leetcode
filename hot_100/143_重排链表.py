@@ -19,13 +19,18 @@ class ListNode:
 
 class Solution:
 
-    def test_case(self):
-        node5 = ListNode(5, None)
-        node4 = ListNode(4, node5)
-        node3 = ListNode(3, node4)
-        node2 = ListNode(2, node3)
-        node1 = ListNode(1, node2)
-        return node1
+    def generate_listNode(self, queue):
+        n = len(queue)
+        if n == 0: return None
+        node_list = []
+        for value in queue:
+            node_list.append(ListNode(value))
+        i = 0
+        while i + 1 < n:
+            node_list[i].next = node_list[i + 1]
+            i += 1
+        node_list[n - 1].next = None
+        return node_list[0]
 
     def reorderList1(self, head: ListNode):  # 解法1  数组
         if not head: return
@@ -81,7 +86,8 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    head = s.test_case()
+    queue = [1, 2, 3, 4, 5]
+    head = s.generate_listNode(queue)
     res_head = s.reorderList1(head)
     out = list()
     while res_head:

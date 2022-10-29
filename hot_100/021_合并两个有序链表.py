@@ -28,7 +28,7 @@ class Solution:
         node_list[n - 1].next = None
         return node_list[0]
 
-    def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
+    def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:   # 迭代
         if not list1: return list2
         if not list2: return list1
         dummy_head = ListNode()
@@ -45,6 +45,18 @@ class Solution:
         if not p1: pre.next = p2
         if not p2: pre.next = p1
         return dummy_head.next
+
+    def mergeTwoLists2(self, l1: ListNode, l2: ListNode) -> ListNode:  # 递归
+        if l1 is None:
+            return l2
+        elif l2 is None:
+            return l1
+        elif l1.val < l2.val:
+            l1.next = self.mergeTwoLists(l1.next, l2)
+            return l1
+        else:
+            l2.next = self.mergeTwoLists(l1, l2.next)
+            return l2
 
 
 # 测试用例

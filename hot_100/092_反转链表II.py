@@ -2,7 +2,7 @@
 """
 题目链接: https://leetcode.cn/problems/reverse-linked-list-ii/
 题目难度：medium
-解题思路:
+解题思路: 第一步，找到待截取链表的前一个节点和后一个节点，用于截取后的重新拼接。第二步，断开子链表前后节点，第三步，反转链表，第四步，拼接链表前后
 """
 
 
@@ -50,17 +50,17 @@ class Solution:
             if count == left - 1:  # 找到左边界的前一个节点
                 pre_left = dumpy
             if count == right:
-                right = dumpy
+                right_node = dumpy
                 break
             dumpy = dumpy.next
             count += 1
         left = pre_left.next
-        post_right = right.next
+        post_right = right_node.next
         # 切断链接，成为子链表
         pre_left.next = None
-        right.next = None
+        right_node.next = None
         reverse(left)  # 反转截取的子链表
-        pre_left.next = right  # 链表重新相接
+        pre_left.next = right_node  # 链表重新相接
         left.next = post_right
         return dumpy_node.next
 

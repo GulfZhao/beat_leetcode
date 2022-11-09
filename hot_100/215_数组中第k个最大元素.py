@@ -2,7 +2,7 @@
 """
 题目链接: https://leetcode.cn/problems/kth-largest-element-in-an-numsay/
 题目难度：medium
-解题思路:
+解题思路: 堆排序，或者传统排序算法也可解答
 """
 from typing import List
 

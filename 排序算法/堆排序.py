@@ -14,7 +14,7 @@ def HeapSort(arr: List[int]):
         largest = parent
         left = 2 * parent + 1
         right = 2 * parent + 2
-        if left < n and arr[largest] < arr[left]:
+        if left < n and arr[largest] < arr[left]:  # 最大堆为小于，最小堆为大于
             largest = left
         if right < n and arr[largest] < arr[right]:
             largest = right
@@ -23,7 +23,7 @@ def HeapSort(arr: List[int]):
             shift_down(arr, n, largest)  # 堆结构可能被破坏，需要重新再调整
 
     n = len(arr)
-    for i in range(n, -1, -1):  # 创建最大堆
+    for i in range(n-1, -1, -1):  # 创建最大堆
         shift_down(arr, n, i)
 
     for i in range(n - 1, 0, -1):

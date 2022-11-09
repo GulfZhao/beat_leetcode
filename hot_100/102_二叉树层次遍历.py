@@ -16,15 +16,23 @@ class TreeNode:
 
 class Solution:
 
-    def test_case(self):
-        num_4 = TreeNode(4, None, None)
-        num_5 = TreeNode(5, None, None)
-        num_6 = TreeNode(6, None, None)
-        num_7 = TreeNode(7, None, None)
-        num_3 = TreeNode(3, num_6, num_7)
-        num_2 = TreeNode(2, num_4, num_5)
-        root = TreeNode(1, num_2, num_3)
-        return root
+    def generate_tree(self, queues):
+        n = len(queues)
+        if n == 0: return None
+        treeNode_list = []
+        for value in queues:
+            if value:
+                node = TreeNode(value)
+            else:
+                node = None
+            treeNode_list.append(node)  # 生成treeNode
+        i = 0
+        while 2 * i + 2 < n:
+            if treeNode_list[i]:
+                treeNode_list[i].left = treeNode_list[2 * i + 1]
+                treeNode_list[i].right = treeNode_list[2 * i + 2]
+            i += 1
+        return treeNode_list[0]
 
     def levelOrder(self, root: [TreeNode]) -> List[List[int]]:
         if not root: return []
@@ -47,6 +55,7 @@ class Solution:
 # 测试用例
 if __name__ == "__main__":
     s = Solution()
-    root = s.test_case()
+    data = [1, 2, 3, None, 5, None, 4]
+    root = s.generate_tree(data)
     res = s.levelOrder(root)
     print(res)
